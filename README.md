@@ -1,4 +1,4 @@
-# LABORATORIO 7: SPRINGBOOT - API REST
+# LABORATORIO 6: SPRINGBOOT - API REST
 
 **Escuela Colombiana de Ingeniería Julio Garavito**  
 **Curso:** Desarrollo y Operaciones de Software - DOSW  
