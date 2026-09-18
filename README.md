@@ -159,17 +159,17 @@ Para los requerimientos: Trabajadores (CRUD) realice:
 
     ```text
     @Service
-    public class UserService {
-        private final List<User> users = new ArrayList<>();
+    public class WorkerService {
+        private final List<Worker> workers = new ArrayList<>();
         private final AtomicLong idGenerator = new AtomicLong(1);
     
-        public UserService() {
+        public WorkerService() {
             // Datos iniciales simulados
-            users.add(new User(1L, "Usuario Demo", "demo@ejemplo.com"));
+            workers.add(new Worker(1L, "trabajador Demo", "demo@ejemplo.com"));
         }
     
-        public List<User> findAll() {
-            return new ArrayList<>(users);
+        public List<Worker> findAll() {
+            return new ArrayList<>(workers);
         }
     }
     ```
@@ -236,12 +236,12 @@ Documentar el API construido anteriormente realizando:
         @GetMapping("/{id}")
         @Operation(summary = "Obtener trabajador por ID", description = "Devuelve un trabajador")
         public Worker getWorkerById(@PathVariable Long id) {
-            return new User(id, "Andres Cantor", "andres@example.com");
+            return new Worker(id, "Andres Cantor", "andres@example.com");
         }
     
         @PostMapping
         @Operation(summary = "Crear un nuevo trabajador", description = "Registra un trabajador")
-        public User createUser(@RequestBody Worker worker) {
+        public Worker createWorker(@RequestBody Worker worker) {
             worker.setId(100L);
             return worker;
         }
